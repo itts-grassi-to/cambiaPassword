@@ -14,7 +14,7 @@ import time
 import ast
 
 #hostName = "localhost"
-hostName = "192.168.201.101"
+hostName = "192.168.1.77"
 serverPort = 8080
 
 class MyServer(BaseHTTPRequestHandler):

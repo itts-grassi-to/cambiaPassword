@@ -4,18 +4,36 @@
 ## EMAIL:	daniele.ortu@itisgrassi.edu.it
 
 from templatePG import CPG
+from oggetti.CTXT import CTXT
 
 class PGHome(CPG):
 	def __init__(self):
 		super().__init__("pagina Home")
 
 	def getPG(self):
-		self.corpo="<form action='pgSN' method='POST'>"
-		self.corpo+="<INPUT type='text'  name='txtUsr' placeholder='user'><br>"
-		self.corpo+="<INPUT type='password'  name='txtVecchia' placeholder='password vecchia'><br>"
-		self.corpo+="<INPUT type='passwor' name='txtNuova' placeholder='password nuova'><br>"
-		self.corpo+="<INPUT type='password' name='txtConferma' placeholder='password confema'><br>"
-		self.corpo+="<INPUT type='submit' value='aggiorna password'><br>"
+		txtUser=CTXT("txtUsr","","utente");
+		txtVecchia=CTXT("txtVecchia","","password vecchia");
+		txtNuova=CTXT("txtNuova","","password nuova");
+		txtConferma=CTXT("txtConferma","","password conferma");
+		self.corpo="<form action='pgSN' method='POST'>\n"
+		#self.corpo+="<INPUT type='text'  name='txtUsr' placeholder='user'><br>"
+		self.corpo+="<TABLE>"
+		self.corpo+="<TR>"
+		self.corpo+="<TD>"+txtUser.getText()+"</TD>\n"
+		self.corpo+="</TR>"
+		self.corpo+="<TR>"
+		self.corpo+="<TD>"+txtVecchia.getText()+"</TD>"
+		self.corpo+="</TR>"
+		self.corpo+="<TR>"
+		self.corpo+="<TD>"+txtNuova.getText()+"</TD>"
+		self.corpo+="</TR>"
+		self.corpo+="<TR>"
+		self.corpo+="<TD>"+txtConferma.getText()+"</TD>"
+		self.corpo+="</TR>"
+		self.corpo+="<TR>"
+		self.corpo+="<TD><INPUT type='submit' value='aggiorna password'></TD>"
+		self.corpo+="</TR>"
+		self.corpo+="</TABLE>"
 		self.corpo+="</form>"
 		
 		return self._getPG()
