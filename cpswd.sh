@@ -1,4 +1,4 @@
 #!/usr/bin/bash
 #
-# print("Lancio")
+## print("Lancio")
 python3 ./srv.py
