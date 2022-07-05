@@ -19,14 +19,16 @@ class CPG():
 		r+="	  <div><b>Main Menu</b></div>"
 		r+="  </div>"
 		return ""
+	def __getBunner(self):
+		return "\n<img src='/img/bunner.png' alt='bunner'>"
 	def __body(self):
 		r="<body>"
 		r+="<div style='width:100%'>"
 		r+="  <div style='background-color:#b5dcb3; width:100%'>"
-		r+="	  <h1>This is Web Page Main title</h1>"
+		r+=" <h1>CAMBIA PASSWORD</h1>"
 		r+="  </div>"
 		r+=self.__menu()
-		r+="  <div style='background-color:#FFFFFF; height:500px;width:100%;float:left;padding-top:20px'>"
+		r+="  <div style='background-color:#ecf0f1; height:500px;width:100%;float:left;padding-top:20px'>"
 		r+="  <center>"
 		r+=self.corpo
 		r+="  </center>"
